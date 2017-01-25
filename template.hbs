@@ -1,0 +1,14 @@
+<div class="product-card__image-container">
+    {{#if (eq product.productImage null)}}
+        <span class="glyphicon glyphicon-picture product-card__image-container--no-image" aria-hidden="true"></span>
+    {{else}}
+        <img src={{product.productImage}}>
+    {{/if}}
+</div>
+<div class="product-card__product-info-container">
+    {{product.name}}<br />
+    Price: {{format-money product.price}}<br />
+    {{#if product.barcode}}
+        UPC: {{product.barcode}}
+    {{/if}}
+</div>
